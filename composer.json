@@ -1,0 +1,66 @@
+{
+    "name": "e/mp-api",
+    "description": "mp API",
+    "keywords": [
+        "mp",
+        "api"
+    ],
+    "homepage": "http://www.yiiframework.com/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "source": "https://github.com/yiisoft/yii2"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4",
+        "yiisoft/yii2": "~2.0.14",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+        "ext-json": "*",
+        "twilio/sdk": "^6.22",
+        "stripe/stripe-php": "^7.80",
+        "guzzlehttp/guzzle": "^7.3",
+        "mailin-api/mailin-api-php": "^1.0",
+        "ext-pdo": "*",
+        "qiwi/bill-payments-php-sdk": "^0.2.2",
+        "ext-curl": "*",
+        "ext-zip": "*",
+        "nbobtc/bitcoind-php": "^2.1",
+        "symfony/mailer": "^5.4"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "yiisoft/yii2-debug": "~2.1.0",
+        "yiisoft/yii2-gii": "~2.1.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+        "codeception/codeception": "^4.1",
+        "codeception/module-asserts": "^1.0",
+        "codeception/module-filesystem": "^1.0",
+        "codeception/verify": "~0.5.0 || ~1.1.0",
+        "symfony/browser-kit": ">=2.7 <=4.2.4",
+        "codeception/module-db": "^1.1",
+        "codeception/module-rest": "^2.0",
+        "codeception/module-yii2": "^1.1"
+    },
+    "config": {
+        "platform-check": false,
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "enabled": false
+        },
+        "allow-plugins": {
+            "yiisoft/yii2-composer": false
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}

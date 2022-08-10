@@ -1,0 +1,27 @@
+actor: ApiTester
+modules:
+  enabled:
+    - \api\tests\Helper\Api
+    - REST:
+        url: /
+        depends: Yii2
+        part: Json
+    - Db:
+        dsn: 'mysql:host=localhost;dbname='
+        user: 'alex'
+        password: '1'
+        dump: 'tests/_data/dump.sql'
+        populate: true # load dump before all tests
+        cleanup: false # load dump for each test
+        reconnect: true
+        waitlock: 10
+        #            ssl_key: '/path/to/client-key.pem'
+        #            ssl_cert: '/path/to/client-cert.pem'
+        #            ssl_ca: '/path/to/ca-cert.pem'
+        #            ssl_verify_server_cert: false
+        #            ssl_cipher: 'AES256-SHA'
+        initial_queries:
+          - 'CREATE DATABASE IF NOT EXISTS mp_test;'
+          - 'USE mp_test;'
+          - 'SET NAMES utf8mb4;'
+          - 'SET time_zone="+00:00";'
